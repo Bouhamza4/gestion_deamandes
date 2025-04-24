@@ -1,0 +1,218 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background: #f9f9f9;
+    transition: background 0.3s ease;
+}
+
+/* Navbar using Flexbox */
+nav {
+    background: #4267B2; /* Facebook blue */
+    color: #fff;
+    padding: 10px;
+}
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+nav ul li {
+    margin-right: 15px;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 12px;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+nav ul li a:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+}
+
+/* Button Styles with Transitions & Transforms */
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+.btn:hover {
+    transform: translateY(-2px);
+}
+.btn-login {
+    background: #4CAF50;
+    color: #fff;
+    margin-left: 10px;
+}
+.btn-register {
+    background: #f44336;
+    color: #fff;
+    margin-left: 10px;
+}
+
+/* Container using Flexbox & Grid */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Footer */
+footer {
+    background: #f4f4f4;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* Form Wrapper for Create/Edit Pages */
+.form-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Media Query for Responsiveness */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
+    .container,
+    .form-wrapper {
+        padding: 10px;
+    }
+}
+
+/* New Form Styles for Create/Edit Pages */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-control {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #4267B2;
+    outline: none;
+}
+
+.submit-btn {
+    padding: 0.75rem 1.5rem;
+    background: #4267B2;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: #365899;
+    transform: translateY(-2px);
+}
+
+/* Enhanced Grid Layout for Wider Screens */
+@media (min-width: 768px) {
+    .form-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+    .form-wrapper h2 {
+        grid-column: 1 / -1;
+    }
+}
+
+/* Grid layout for posts index */
+.post-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+.post-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+.post-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.post-info {
+    padding: 10px;
+}
+.post-author {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 5px;
+}
+.post-actions {
+    margin-top: auto;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    background-color: #f7f7f7;
+}
+.post-actions .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Icon Styles using Unicode emoji as placeholders */
+.icon-comment:before {
+    content: "\1F4AC"; /* Speech balloon */
+    font-size: 1.2rem;
+}
+.icon-create:before {
+    content: "\270D"; /* Writing hand */
+    font-size: 1.2rem;
+    margin-right: 5px;
+}
+.icon-eye:before {
+    content: "\1F441"; /* Eye */
+    font-size: 1.2rem;
+}
+.icon-edit:before {
+    content: "\270F"; /* Pencil */
+    font-size: 1.2rem;
+}
+.icon-delete:before {
+    content: "\1F5D1"; /* Trash can */
+    font-size: 1.2rem;
+}

@@ -1,0 +1,15 @@
+@extends('vposts.layouts.toutes')
+@section('title',"information Posts")
+@section('contentShowDetails')
+<h3> {{$posts['title']}} </h3>
+<h6> {{$posts['body']}} </h6>
+{{-- <a class="btn btn-primary" href="{{route('Users.edit',$user['id'])}}">Edit</a> --}}
+<hr/>
+{{-- delete --}}
+{{-- <form action="{{route("Users.destroy",$user['id'])}}" method="post">
+    @csrf
+    @method('DELETE')
+    <button type="submit" class="btn btn-warning">DELETE</button>
+</form> --}}
+
+@endsection

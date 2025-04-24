@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #1E1E2D;
+      color: #FFFFFF;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      display: flex;
+      width: 90%;
+      max-width: 1200px;
+      background-color: #25253A;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+    }
+    .left-section {
+      flex: 1;
+      position: relative;
+      padding: 20px;
+    }
+    .left-section img {
+      width: 100%;
+      max-width: 400px;
+      margin: auto;
+      display: block;
+    }
+    .stats {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .stat-card {
+      background-color: #2E2E48;
+      padding: 15px 20px;
+      border-radius: 8px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    }
+    .stat-card h3 {
+      margin: 0;
+      font-size: 16px;
+      color: #9C9CBA;
+    }
+    .stat-card p {
+      margin: 5px 0 0;
+      font-size: 18px;
+      font-weight: 600;
+    }
+    .stat-card .growth {
+      color: #4CAF50;
+      font-size: 14px;
+    }
+    .right-section {
+      flex: 1;
+      padding: 40px;
+      background-color: #1E1E2D;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .right-section h1 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: 600;
+    }
+    .right-section p {
+      font-size: 14px;
+      color: #9C9CBA;
+      margin: 10px 0 20px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+    .form-group input {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #3E3E5F;
+      background-color: #2E2E48;
+      color: #FFFFFF;
+      font-size: 14px;
+    }
+    .actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .actions a {
+      font-size: 14px;
+      color: #725BFF;
+      text-decoration: none;
+    }
+    .actions a:hover {
+      text-decoration: underline;
+    }
+    .button {
+      background-color: #725BFF;
+      color: #FFFFFF;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      width: 100%;
+      text-align: center;
+    }
+    .button:hover {
+      background-color: #5A44D3;
+    }
+    .social-login {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+    .social-login img {
+      width: 32px;
+      height: 32px;
+      cursor: pointer;
+    }
+    .social-login img:hover {
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="left-section">
+      <div class="stats">
+        <div class="stat-card">
+          <h3>Profit</h3>
+          <p>624k</p>
+          <span class="growth">+8.24%</span>
+        </div>
+        <div class="stat-card">
+          <h3>Order</h3>
+          <p>124k</p>
+          <span class="growth">+12.6%</span>
+        </div>
+      </div>
+    </div>
+    <div class="right-section">
+      <h1>Welcome to Vuexy! 👋</h1>
+      <p>Please sign-in to your account and start the adventure</p>
+      <form>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="admin@vuexy.com" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="••••••••" required>
+        </div>
+        <div class="actions">
+          <label>
+            <input type="checkbox"> Remember Me
+          </label>
+          <a href="#">Forgot Password?</a>
+        </div>
+        <button type="submit" class="button">Login</button>
+      </form>
+      <p style="text-align: center; margin-top: 20px;">New on our platform? <a href="#" style="color: #725BFF;">Create an account</a></p>
+      <div class="social-login">
+        <img src="facebook-icon.png" alt="Facebook">
+        <img src="twitter-icon.png" alt="Twitter">
+        <img src="google-icon.png" alt="Google">
+      </div>
+    </div>
+  </div>
+</body>
+</html>
