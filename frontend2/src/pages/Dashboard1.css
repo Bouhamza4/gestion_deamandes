@@ -1,0 +1,103 @@
+.dashboard-container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+  }
+  .sidebar {
+    width: 260px;
+    background: linear-gradient(180deg, #1f1f2e, #0a0a20);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1rem;
+    transition: width 0.3s;
+  } 
+  .logo {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+  }
+  nav {
+    flex: 1;
+  }
+  .menu-btn {
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: #ccc;
+    padding: 0.8rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.3s, color 0.3s;
+  }
+  .menu-btn:hover,
+  .menu-btn.active {
+    background: rgba(82, 78, 238, 0.2);
+    color: #fff;
+  }
+  .profile-wrapper {
+    position: relative;
+    margin-top: 2rem;
+    text-align: center;
+  }
+  .profile-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  .profile-avatar:hover {
+    transform: scale(1.1);
+  }
+  .profile-dropdown {
+    position: absolute;
+    bottom: -180px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #252538;
+    list-style: none;
+    padding: 0.5rem 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    width: 180px;
+    z-index: 10;
+  }
+  .profile-dropdown li {
+    color: #ddd;
+    padding: 0.6rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .profile-dropdown li:hover {
+    background: rgba(255,255,255,0.1);
+  }
+  .content {
+    flex: 1;
+    background: #f5f6fa;
+    padding: 2rem;
+    overflow-y: auto;
+  }
+  .dashboard-panel {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+  }
+  .dashboard-panel:hover {
+    transform: translateY(-5px);
+  }
+  .dashboard-panel h3 {
+    margin-top: 0;
+  }
+  

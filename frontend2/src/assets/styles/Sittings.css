@@ -1,0 +1,68 @@
+.settings-container {
+  /* margin-left:230px; */
+  padding: 30px;
+  background: #0f172a;
+  color: #f8fafc;
+  /* center content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  min-height: calc(100vh - 60px);
+}
+.settings-container h2 {
+  color: #38bdf8;
+  margin-bottom: 20px;
+}
+.settings-form {
+  max-width: 1300px;
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+.form-group {
+  width: 800px;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.form-group label {
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+.form-group input {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background: #334155;
+  color: #f8fafc;
+  outline: none;
+}
+.password-group .password-wrapper {
+  position: relative;
+}
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.save-btn {
+  margin-top: 20px;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 6px;
+  background: #38bdf8;
+  color: #1e293b;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.save-btn:hover {
+  background: #22d3ee;
+}

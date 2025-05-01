@@ -1,0 +1,73 @@
+/* src/assets/styles/ReservationDetailsModal.css */
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(15, 23, 42, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background: #1e293b;
+    padding: 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    color: #f8fafc;
+    box-shadow: 0 4px 30px rgba(0,0,0,0.6);
+    position: relative;
+  }
+  
+  .modal-content h2 {
+    color: #38bdf8;
+    margin-bottom: 20px;
+  }
+  
+  .modal-info p {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  
+  .status {
+    padding: 2px 8px;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-left: 5px;
+  }
+  
+  .status.en_attente {
+    background: #fbbf24;
+    color: #1e293b;
+  }
+  .status.accepte {
+    background: #22c55e;
+    color: #1e293b;
+  }
+  .status.refuse {
+    background: #ef4444;
+    color: #1e293b;
+  }
+  
+  .close-btn {
+    margin-top: 20px;
+    background: #38bdf8;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    width: 100%;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .close-btn:hover {
+    background: #22d3ee;
+  }
+  

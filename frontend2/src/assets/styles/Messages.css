@@ -1,0 +1,41 @@
+.messages-container {
+    /* margin-left:230px; */
+    padding: 30px;
+    background: #0f172a;
+    color: #f8fafc;
+    height: calc(100vh - 60px);
+    overflow-y: auto;
+  }
+  .messages-container h2 {
+    margin-bottom: 20px;
+    color: #38bdf8;
+  }
+  .messages-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .message-item {
+    display: grid;
+    grid-template-columns: 1fr 4fr auto;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #334155;
+    cursor: pointer;
+  }
+  .message-item:hover {
+    background: #1e293b;
+  }
+  .message-sender {
+    font-weight: 600;
+  }
+  .message-content {
+    padding: 0 15px;
+    color: #cbd5e1;
+  }
+  .message-date {
+    font-size: 14px;
+    color: #64748b;
+  }
+  
+  
