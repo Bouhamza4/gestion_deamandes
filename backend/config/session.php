@@ -17,6 +17,9 @@ return [
     |            "memcached", "redis", "dynamodb", "array"
     |
     */
+    'stateful' => explode(',', env('SANCTUM_STATEFUL_DOMAINS', 'localhost:3000')),
+
+'same_site' => 'lax',
 
     'driver' => env('SESSION_DRIVER', 'database'),
 

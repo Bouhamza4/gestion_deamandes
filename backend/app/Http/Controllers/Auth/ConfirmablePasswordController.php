@@ -15,9 +15,12 @@ class ConfirmablePasswordController extends Controller
     /**
      * Show the confirm password view.
      */
-    public function show(): Response
+    public function show( Request $request)
+    
     {
-        return Inertia::render('Auth/ConfirmPassword');
+        return $request->user()->hasVerifiedPassword()
+        ? response()->json(['redirect' => route('dashboard')])
+        : response()->json(['message' => 'password non vérifié'], 403);
     }
 
     /**
