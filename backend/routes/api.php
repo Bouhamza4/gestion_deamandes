@@ -13,6 +13,11 @@ use App\Http\Controllers\AuthController;
 // ✅ Auth routes (register / login / logout)
 // use App\Http\Controllers\AuthController;
 // use Illuminate\Support\Facades\Route;
+//test
+Route::get("/test", function (){
+    return "amin vvvvvvvvvvvvvv";
+});
+
 
 Route::middleware('guest')->post('/register', [AuthController::class, 'register']);
 Route::middleware('guest')->post('/login', [AuthController::class, 'login']);
@@ -24,7 +29,10 @@ Route::middleware('auth:sanctum')->post('/logout', [AuthController::class, 'logo
 Route::middleware('guest')->get('/reservations', [ReservationController::class, 'index']);
 
 // routes/api.php
-Route::middleware('auth:sanctum')->post('/reservations', [ReservationController::class, 'store']);
+Route::middleware('guest')->group(function () {
+    Route::post('/reservations', [ReservationController::class, 'store']);
+});
+
 
 // ✅ Reservations (protected)
 // Route::middleware('auth:sanctum')->group(function () {
